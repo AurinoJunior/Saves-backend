@@ -19,7 +19,7 @@ io.on('connection', socket => {
 })
 
 mongoose.connect(
-  'mongodb+srv://dev:dev123@week6-yvzv5.mongodb.net/omnistack?retryWrites=true',
+  `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@week6-yvzv5.mongodb.net/omnistack?retryWrites=true`,
   {
   useNewUrlParser: true
   }
