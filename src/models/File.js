@@ -18,6 +18,7 @@ const File = new mongoose.Schema(
   }
 );
 
+// Cria um ambiente virtual onde gera uma url do arquivo enviado. 
 File.virtual('url').get(function(){
   const url = process.env.URL || 'http://localhost:3000' 
   return `${url}/files/${encodeURIComponent(this.path)}`
